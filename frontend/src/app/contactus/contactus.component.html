@@ -1,0 +1,45 @@
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <label>
+      Name:
+      <input formControlName="name" type="text">
+    </label>
+    <br>
+  
+    <label>
+      Email:
+      <input formControlName="email" type="email">
+    </label>
+    <br>
+  
+    <label>
+      Phone:
+      <input formControlName="phone" type="text">
+    </label>
+    <br>
+  
+    <label>
+      Subject:
+      <input formControlName="subject" type="text">
+    </label>
+    <br>
+  
+    <label>
+      Source:
+      <select formControlName="source">
+        <option value="">Select</option>
+        <option value="website">Website</option>
+        <option value="social">Social Media</option>
+        <option value="friend">Friend</option>
+      </select>
+    </label>
+    <br>
+  
+    <label>
+      Message:
+      <textarea formControlName="message"></textarea>
+    </label>
+    <br>
+  
+    <button type="submit" [disabled]="!contactForm.valid">Submit</button>
+  </form>
+  
