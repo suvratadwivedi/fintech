@@ -27,6 +27,7 @@ export class ContactusComponent {
      console.log('Form value:', this.contactForm.value);
       this.http.post('http://localhost:5000/api/contactus',this.contactForm.value).subscribe((result)=>{
         console.log(result);
+        alert('submitted successfully');
         this.contactForm.reset();
       })
       // Reset form after submit if needed
